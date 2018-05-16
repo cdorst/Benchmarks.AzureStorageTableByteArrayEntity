@@ -3,10 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27701.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{EA056B98-5B98-41C7-9244-33D084D44FC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{EA056B98-5B98-41C7-9244-33D084D44FC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7990816-0B6A-42BF-A52E-CB9EA6ABEFA7}"
 	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
 		README.md = README.md
 		run.ps1 = run.ps1
 		run.sh = run.sh

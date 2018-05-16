@@ -21,6 +21,10 @@ namespace Benchmarks
             => new CustomTypeEntity(Id, Value);
 
         [Benchmark]
+        public CustomTypeEntityInRef CustomTypeInstantiationInRef()
+            => new CustomTypeEntityInRef(Id, Value);
+
+        [Benchmark]
         public (string, string) CustomTypeKeyRetrieval()
             => (CustomEntity.PartitionKey, CustomEntity.RowKey);
 
@@ -62,7 +66,7 @@ namespace Benchmarks
                 .AppendLine()
                 .AppendLine("## Question")
                 .AppendLine()
-                .AppendLine("For Azure Storage Table entities with unique partition keys and `byte[]` content, what is the performance impact (if any) of using a custom `ITableEntity` type instead of a type derived from the `TableEntity` base class?")
+                .AppendLine("For Azure Storage Table entities with unique partition keys and `byte[]` content, what is the performance impact (if any) of using a custom `ITableEntity` type instead of a type derived from the `TableEntity` base class? What is the performance impact of using the `in` readonly-reference keyword when constructing new objects?")
                 .AppendLine()
                 .AppendLine("## Variables")
                 .AppendLine()
@@ -73,7 +77,7 @@ namespace Benchmarks
                 .AppendLine()
                 .AppendLine("Performance impact is observed across these dimensions:")
                 .AppendLine()
-                .AppendLine("- Object instantiation")
+                .AppendLine("- Object instantiation (including use of the `in` keyword)")
                 .AppendLine("- Key-property access")
                 .AppendLine("- `ReadEntity` method invocation")
                 .AppendLine("- `WriteEntity` method invocation")
@@ -88,7 +92,6 @@ namespace Benchmarks
                 .AppendLine();
             foreach (var line in dataTable) readme.AppendLine(line);
             readme.AppendLine();
-            // summary
             readme
                 .AppendLine("## Conclusion")
                 .AppendLine()
