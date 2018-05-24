@@ -10,7 +10,7 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.10.14" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-rc1-final" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.0-rc1-final" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.1.1" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.2.0" />
   </ItemGroup>
 
 </Project>

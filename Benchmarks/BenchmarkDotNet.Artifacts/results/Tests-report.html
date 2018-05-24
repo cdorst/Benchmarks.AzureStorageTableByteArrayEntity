@@ -17,23 +17,23 @@ BenchmarkDotNet=v0.10.14, OS=Windows 10.0.17134
 Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
 .NET Core SDK=2.1.300-rc1-008673
   [Host]     : .NET Core 2.1.0-rc1 (CoreCLR 4.6.26426.02, CoreFX 4.6.26426.04), 64bit RyuJIT
-  Job-JMMNQF : .NET Core 2.1.0-rc1 (CoreCLR 4.6.26426.02, CoreFX 4.6.26426.04), 64bit RyuJIT
+  Job-EEIOGG : .NET Core 2.1.0-rc1 (CoreCLR 4.6.26426.02, CoreFX 4.6.26426.04), 64bit RyuJIT
 </code></pre>
 <pre><code>LaunchCount=10  
 </code></pre>
 
 <table>
-<thead><tr><th>                Method</th><th>  Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th>
+<thead><tr><th>                Method</th><th>  Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen 0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>CustomTypeInstantiation</td><td>56.064 ns</td><td>0.4707 ns</td><td>2.3638 ns</td><td>55.566 ns</td><td>4</td>
-</tr><tr><td>CustomTypeInstantiationInRef</td><td>56.640 ns</td><td>0.5415 ns</td><td>2.4580 ns</td><td>55.956 ns</td><td>4</td>
-</tr><tr><td>CustomTypeKeyRetrieval</td><td>4.714 ns</td><td>0.1132 ns</td><td>0.4514 ns</td><td>4.861 ns</td><td>1</td>
-</tr><tr><td>CustomTypeReadEntity</td><td>45.053 ns</td><td>0.3175 ns</td><td>1.2548 ns</td><td>44.683 ns</td><td>3</td>
-</tr><tr><td>CustomTypeWriteEntity</td><td>166.043 ns</td><td>1.0401 ns</td><td>4.0122 ns</td><td>165.569 ns</td><td>5</td>
-</tr><tr><td>DerivedTypeInstantiation</td><td>56.336 ns</td><td>0.3947 ns</td><td>1.5598 ns</td><td>56.124 ns</td><td>4</td>
-</tr><tr><td>DerivedTypeKeyRetrieval</td><td>5.012 ns</td><td>0.0340 ns</td><td>0.1236 ns</td><td>4.999 ns</td><td>2</td>
-</tr><tr><td>DerivedTypeReadEntity</td><td>3,143.487 ns</td><td>20.2793 ns</td><td>77.7395 ns</td><td>3,134.838 ns</td><td>7</td>
-</tr><tr><td>DerivedTypeWriteEntity</td><td>3,036.002 ns</td><td>13.8699 ns</td><td>51.2990 ns</td><td>3,037.277 ns</td><td>6</td>
+</thead><tbody><tr><td>CustomTypeInstantiation</td><td>54.468 ns</td><td>0.5124 ns</td><td>2.2465 ns</td><td>54.023 ns</td><td>5</td><td>0.0330</td><td>104 B</td>
+</tr><tr><td>CustomTypeInstantiationInRef</td><td>53.375 ns</td><td>0.2950 ns</td><td>1.1309 ns</td><td>53.345 ns</td><td>4</td><td>0.0330</td><td>104 B</td>
+</tr><tr><td>CustomTypeKeyRetrieval</td><td>4.576 ns</td><td>0.0234 ns</td><td>0.0846 ns</td><td>4.577 ns</td><td>2</td><td>-</td><td>0 B</td>
+</tr><tr><td>CustomTypeReadEntity</td><td>44.716 ns</td><td>0.4932 ns</td><td>1.7680 ns</td><td>44.165 ns</td><td>3</td><td>-</td><td>0 B</td>
+</tr><tr><td>CustomTypeWriteEntity</td><td>163.864 ns</td><td>0.8354 ns</td><td>3.0158 ns</td><td>163.422 ns</td><td>7</td><td>0.0787</td><td>248 B</td>
+</tr><tr><td>DerivedTypeInstantiation</td><td>55.898 ns</td><td>0.2775 ns</td><td>1.0089 ns</td><td>55.846 ns</td><td>6</td><td>0.0355</td><td>112 B</td>
+</tr><tr><td>DerivedTypeKeyRetrieval</td><td>4.325 ns</td><td>0.0285 ns</td><td>0.1027 ns</td><td>4.315 ns</td><td>1</td><td>-</td><td>0 B</td>
+</tr><tr><td>DerivedTypeReadEntity</td><td>3,096.046 ns</td><td>14.9035 ns</td><td>56.0441 ns</td><td>3,089.750 ns</td><td>9</td><td>0.5493</td><td>1736 B</td>
+</tr><tr><td>DerivedTypeWriteEntity</td><td>3,002.374 ns</td><td>12.4190 ns</td><td>44.8345 ns</td><td>3,000.432 ns</td><td>8</td><td>0.6104</td><td>1920 B</td>
 </tr></tbody></table>
 </body>
 </html>

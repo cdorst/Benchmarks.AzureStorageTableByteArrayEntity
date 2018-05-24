@@ -12,7 +12,7 @@ using static Benchmarks.Constants;
 
 namespace Benchmarks
 {
-    [SimpleJob(10)]
+    [SimpleJob(10), MemoryDiagnoser]
     [RPlotExporter, RankColumn]
     public class Tests
     {
