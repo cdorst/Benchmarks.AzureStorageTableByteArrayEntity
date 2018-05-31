@@ -62,7 +62,7 @@ namespace Benchmarks
             var readme = new StringBuilder()
                 .Append("# Azure Storage Table byte[] ITableEntity implementation benchmarks")
                 .AppendLine()
-                .AppendLine("Run `./run.ps1` or `./run.sh` at the repository root to repeat the experiment")
+                .AppendLine("Run `.\run.ps1` or `./run.sh` at the repository root to repeat the experiment")
                 .AppendLine()
                 .AppendLine("## Question")
                 .AppendLine()

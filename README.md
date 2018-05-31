@@ -1,5 +1,5 @@
 # Azure Storage Table byte[] ITableEntity implementation benchmarks
-Run `./run.ps1` or `./run.sh` at the repository root to repeat the experiment
+Run `.\run.ps1` or `./run.sh` at the repository root to repeat the experiment
 
 ## Question
 
