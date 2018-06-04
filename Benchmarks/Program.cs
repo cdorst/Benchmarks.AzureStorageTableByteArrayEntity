@@ -1,4 +1,4 @@
-﻿using BenchmarkDotNet.Running;
+﻿using static BenchmarkDotNet.Running.BenchmarkRunner;
 using static Benchmarks.ReadmeWriter;
 
 namespace Benchmarks
@@ -7,7 +7,7 @@ namespace Benchmarks
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<Tests>();
+            Run<Tests>();
             WriteReadme();
         }
     }
